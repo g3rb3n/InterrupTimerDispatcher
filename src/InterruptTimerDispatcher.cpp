@@ -21,7 +21,7 @@ namespace g3rb3n
     {
         noInterrupts();
         timer0_isr_init();
-        timer0_attachInterrupt(InterruptTimerDispatcher::ISR);
+        timer0_attachInterrupt(InterruptTimerDispatcher::handle);
         timer0_write(0);
         interrupts();
     }
